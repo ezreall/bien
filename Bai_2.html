@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+<input id="nhap so" type="number">
+<input id="nhap so 1" type="number">
+<br>
+<input id="cong"    type="button" value="Addition(+)" onclick="lick1()">
+<input id="tru" type="button" value="Subtraction(-)" onclick="lick2()">
+<input id="chia" type="button" value="Multiplication" onclick="lick3()">
+<input id="nhan" type="button" value="Division" onclick="lick4()">
+<p id="index"></p>
+</body>
+</html>
+<style>
+    input{
+        margin-top:10px ;
+    }
+</style>
+<script>
+    function lick1(){
+       let k=parseInt(document.getElementById("nhap so").value);
+       let n=parseInt(document.getElementById("nhap so 1").value);
+       let z=k+n;
+       document.getElementById("index").innerHTML="ket qua;"+ z;
+    }
+    function lick2(){
+        let k=parseInt(document.getElementById("nhap so").value);
+        let n=parseInt(document.getElementById("nhap so 1").value);
+        let z=k-n;
+        document.getElementById("index").innerHTML="ket qua;"+z;
+    }
+    function lick3(){
+        let k=parseInt(document.getElementById("nhap so").value);
+        let n=parseInt(document.getElementById("nhap so 1").value);
+        let z=k/n;
+        document.getElementById("index").innerHTML="ket qua;"+z;
+    }
+    function lick4(){
+        let k=parseInt(document.getElementById("nhap so").value);
+        let n=parseInt(document.getElementById("nhap so 1").value);
+        let z=k*n;
+        document.getElementById("index").innerHTML="ket qua:"+z
+    }
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>Amount</li>
+    <li>From Currency</li>
+    <li>To Currency</li>
+</ul>
+<input id="font" type="number" >
+<select name="" id=" dola">
+    <option value="23000">VietNam</option>
+    <option value="1">Usd</option>
+</select>
+<select id="tien">
+    <option value="1">Usd</option>
+    <option value="23000">VietNam</option>
+</select>
+<input id="hienthi" type="button" value="ketqua" onclick="checkbox()" >
+</body>
+</html>
+<style>
+    ul li{
+        list-style: none;
+        display: inline;
+        padding: 20px;
+    }
+    select option{
+        padding: 0 30px;
+    }
+</style>
+<script>
+    function checkbox(){
+        let VietNam=document.getElementById(" dola").value;
+        let Usd=document.getElementById("tien").value;
+        let money=document.getElementById('font').value;
+        let S=Usd*money/VietNam;
+        document.getElementById("hienthi").value=S;
+    }
+</script>
